@@ -1,0 +1,211 @@
+
+-----------------------------------------------------------------------------------------
+--antilag
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local TextButton = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ResetOnSpawn = false
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.Position = UDim2.new(0.59, 0, -0.1, 0)
+Frame.Size = UDim2.new(0, 55, 0, 60)
+Frame.Active = true
+Frame.Draggable = true
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.Position = UDim2.new(0.0664556995, 0, 0.212307781, 0)
+TextButton.Size = UDim2.new(0, 48, 0, 45)
+TextButton.Font = Enum.Font.Cartoon
+TextButton.Text = "antilag"
+TextButton.TextColor3 = Color3.fromRGB(255,255, 255)
+TextButton.TextSize = 20.000
+TextButton.MouseButton1Down:connect(function()
+
+-- Made by RIP#6666
+_G.Settings = {
+    Players = {
+        ["Ignore Me"] = false, -- Ignore your Character
+        ["Ignore Others"] = false -- Ignore other Characters
+    },
+    Meshes = {
+        Destroy = false, -- Destroy Meshes
+        LowDetail = true -- Low detail meshes (NOT SURE IT DOES ANYTHING)
+    },
+    Images = {
+        Invisible = true, -- Invisible Images
+        LowDetail = false, -- Low detail images (NOT SURE IT DOES ANYTHING)
+        Destroy = false, -- Destroy Images
+    },
+    Other = {
+        ["No Particles"] = true, -- Disables all ParticleEmitter, Trail, Smoke, Fire and Sparkles
+        ["No Camera Effects"] = true, -- Disables all PostEffect's (Camera/Lighting Effects)
+        ["No Explosions"] = true, -- Makes Explosion's invisible
+        ["No Clothes"] = true, -- Removes Clothing from the game
+        ["Low Water Graphics"] = true, -- Removes Water Quality
+        ["No Shadows"] = true, -- Remove Shadows
+        ["Low Rendering"] = true, -- Lower Rendering
+        ["Low Quality Parts"] = true -- Lower quality parts
+    }
+}
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CasperFlyModz/discord.gg-rips/main/FPSBooster.lua"))()
+
+
+end)
+------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+--auto tycoon
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local TextButton = Instance.new("TextButton")
+local TextButton2 = Instance.new("TextButton")
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ResetOnSpawn = false
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.Position = UDim2.new(0.65, 0, -0.1, 0)
+Frame.Size = UDim2.new(0, 55, 0, 60)
+Frame.Active = true
+Frame.Draggable = true
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.Position = UDim2.new(0.0664556995, 0, 0.212307781, 0)
+TextButton.Size = UDim2.new(0, 48, 0, 45)
+TextButton.Font = Enum.Font.Cartoon
+TextButton.Text = "Click"
+TextButton.TextColor3 = Color3.fromRGB(255,255, 255)
+TextButton.TextSize = 20.000
+TextButton.MouseButton1Down:connect(function()
+TextButton2.Parent = Frame
+TextButton2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextButton2.Position = UDim2.new(0.0664556995, 0, 0.212307781, 0)
+TextButton2.Size = UDim2.new(0, 48, 0, 45)
+TextButton2.Font = Enum.Font.Cartoon
+TextButton2.Text = "Stop"
+TextButton2.TextColor3 = Color3.fromRGB(255,255, 255)
+TextButton2.TextSize = 20.000
+--script here
+
+
+TextButton.Visible = false
+TextButton2.Visible = true
+
+_G.tycoon = true
+while _G.tycoon == true do wait()
+    for i,v in pairs(workspace:GetDescendants()) do
+        if v.Name == "Click" and v:FindFirstChild("ClickDetector") then
+            fireclickdetector(v.ClickDetector)
+        end
+    end
+end
+end)
+--Button un auto
+-- Instances:
+
+
+
+TextButton2.MouseButton1Down:connect(function()
+--script here------
+
+
+
+
+_G.tycoon = false
+while _G.tycoon == true do wait()
+    for i,v in pairs(workspace:GetDescendants()) do
+        if v.Name == "Click" and v:FindFirstChild("ClickDetector") then
+            fireclickdetector(v.ClickDetector)
+        end
+    end
+end
+TextButton.Visible = true
+TextButton2.Visible = false
+end)
+------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+--auto hitbob
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local TextButton = Instance.new("TextButton")
+local TextButton2 = Instance.new("TextButton")
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ResetOnSpawn = false
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.Position = UDim2.new(0.71, 0, -0.1, 0)
+Frame.Size = UDim2.new(0, 55, 0, 60)
+Frame.Active = true
+Frame.Draggable = true
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.Position = UDim2.new(0.0664556995, 0, 0.212307781, 0)
+TextButton.Size = UDim2.new(0, 48, 0, 45)
+TextButton.Font = Enum.Font.Cartoon
+TextButton.Text = "Hit"
+TextButton.TextColor3 = Color3.fromRGB(255,255, 255)
+TextButton.TextSize = 20.000
+TextButton.MouseButton1Down:connect(function()
+TextButton2.Parent = Frame
+TextButton2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextButton2.Position = UDim2.new(0.0664556995, 0, 0.212307781, 0)
+TextButton2.Size = UDim2.new(0, 48, 0, 45)
+TextButton2.Font = Enum.Font.Cartoon
+TextButton2.Text = "Stop"
+TextButton2.TextColor3 = Color3.fromRGB(255,255, 255)
+TextButton2.TextSize = 20.000
+--script here
+
+
+TextButton.Visible = false
+TextButton2.Visible = true
+
+_G.bob = true
+while _G.bob == true do wait()
+    local Event = game:GetService("Workspace").bobBoss.DamageEvent Event:FireServer()
+end
+end)
+--Button un auto
+-- Instances:
+
+
+
+TextButton2.MouseButton1Down:connect(function()
+--script here------
+
+
+
+
+_G.bob = false
+while _G.bob == true do wait()
+    local Event = game:GetService("Workspace").bobBoss.DamageEvent Event:FireServer()
+end
+TextButton.Visible = true
+TextButton2.Visible = false
+end)
+------------------------------------------------------------------------------------------
+
